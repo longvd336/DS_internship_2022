@@ -53,3 +53,26 @@ $ ncdu [path/to/folder]
 - Then install `jupyter notebook` module
 - You need create your own kernel by command ```python -m ipykernel install --user -name=labtest``` 
 - After create your own kernel => go to terminal and type `jupyter notebook` to launch. In the jupyter window -> remind choose your kernel.
+
+## 4. About tensorboard.
+
+- Tensor board is a visualization toolkit for machine learning or deep learning experimentation. It track and visualize metrics such as loss and accuracy, visualize model graph, view histograms, display image and more.
+- To use `Tensorboard` firstly you need tho install via commmand ```$ pip install torch torchvision```
+- Using Tensorboard with Pytorch we need to create a `SummaryWriter` instance
+- To run TensorBoard: 
+  ```
+  # First you need install tensorboard
+  $ pip install tensorboard
+
+  # Start tensorboard
+  $ tensorboard --logdir=runs
+  ```
+- Share TensorBoard dashboards
+  
+  ```
+  # Install the latest version of tensorboard to use the uploader
+  $ pip install tensorboard --upgrade
+
+  # Upload and share your tensorboard
+  $ tensorboard dev upload --logdir runs --name <name_log_runs> --description <description_about_log>
+  ```
